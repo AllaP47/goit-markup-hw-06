@@ -42,18 +42,7 @@ input {
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  min-width: 320px;
-}
-@media only screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding: 0 16px;
-  }
-}
-@media only screen and (min-width: 1188px) {
-  .container {
-    max-width: 1158px;
-  }
+  max-width: 1158px;
 }
 .icon-instagram,
 .icon-twitter,
