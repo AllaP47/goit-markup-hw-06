@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    /* page-header */
     <header class="page-header">
       <div class="container">
         <nav class="header-nav">
@@ -54,15 +55,101 @@
             </li>
           </ul>
         </address>
+        <button class="icon-nav-btn" type="button">
+          <svg class="icon-menu" width="24" height="24">
+            <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
+          </svg>
+        </button>
+      </div>
+      /* mob-backdrop-menu is-open */
+      <div class="mob-backdrop-menu is-open">
+        <div class="menu-window">
+          <button class="mob-icon-menu-closed">
+            <svg class="icon-close-menu" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="mob-list">
+            <li class="mob-item">
+              <a class="mob-link current" href="./index.html">Studio</a>
+            </li>
+            <li class="mob-item">
+              <a class="mob-link" href="">Portfolio</a>
+            </li>
+            <li class="mob-item">
+              <a class="mob-link" href="">Contacts</a>
+            </li>
+          </ul>
+          <ul class="address-list-menu">
+            <li class="address-item-menu">
+              <a class="address-link-menu" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="address-item-menu">
+              <a class="address-link-menu" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+          <ul class="social-icons-list-menu">
+            <li class="social-icons-item-menu">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="link-menu"
+              >
+                <svg class="icon-social-menu" width="16" height="16">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-icons-item-menu">
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                class="link-menu"
+              >
+                <svg class="icon-social-menu" width="16" height="16">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-icons-item-menu">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="link-menu"
+              >
+                <svg class="icon-social-menu" width="16" height="16">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-icons-item-menu">
+              <a
+                href="https://ua.linkedin.com/"
+                target="_blank"
+                class="link-menu"
+              >
+                <svg class="icon-social-menu" width="16" height="16">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
+      /* hero-image */
       <section class="hero-image">
         <div class="hero-container">
           <h1 class="hero-text">Effective Solutions for Your Business</h1>
           <button class="hero-button" type="button">Order Service</button>
         </div>
       </section>
+      /* opportunities */
       <section class="opportunities">
         <div class="container opportunities-container">
           <h2 class="visualli-hidden">our opportunities</h2>
@@ -119,6 +206,7 @@
           </ul>
         </div>
       </section>
+      /* team */
       <section class="team">
         <div class="container">
           <h2 class="team-logo">Our Team</h2>
@@ -358,6 +446,7 @@
           </ul>
         </div>
       </section>
+      /* portfolio */
       <section class="portfolio">
         <div class="container">
           <h2 class="portfolio-logo">Our Portfolio</h2>
@@ -490,6 +579,7 @@
         </div>
       </section>
     </main>
+    /* page-footer */
     <footer class="page-footer">
       <div class="container footer-container">
         <div class="footer-logo-box">
@@ -574,6 +664,7 @@
         </div>
       </div>
     </footer>
+    /* backdrop is-open */
     <div class="backdrop is-open">
       <div class="modal">
         <button class="click-button" type="button">
