@@ -40,9 +40,21 @@ input {
 }
 
 .container {
-  padding: 0 15px;
+  padding: 0 16px;
   margin: 0 auto;
-  max-width: 1158px;
+  max-width: 320px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158;
+    padding: 0 15px;
+  }
 }
 .icon-instagram,
 .icon-twitter,
@@ -89,6 +101,7 @@ input {
 .logo-link-header {
   color: #2e2f42;
 }
+
 .nav-list {
   display: flex;
   gap: 40px;
@@ -169,7 +182,7 @@ input {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/fone-hero/people-office.jpg);
+    url(../images/fone-hero/people-office@1x.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
