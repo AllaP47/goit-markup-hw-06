@@ -297,8 +297,8 @@ input {
   flex-grow: 0;
   margin: 20px 0px;
 }
-.mob-link .active,
-.address-link-menu .active {
+.mob-link.active,
+.address-link-menu.active {
   color: #404bbf;
 }
 .mob-link {
@@ -370,12 +370,16 @@ input {
   height: 24px;
   fill: #fff;
 }
+@media only screen and (min-width: 768px) {
+  .mob-backdrop-menu {
+    display: none;
+  }
+}
 /* hero-image */
 .hero-image {
   background-color: #2e2f42;
-  padding-top: 188px;
-  padding-bottom: 188px;
-  max-width: 1440px;
+  max-width: 320px;
+  margin: 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -384,21 +388,23 @@ input {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  margin: 0 auto;
+  /*
+ ;*/
 }
-
+.hero-container {
+  display: block;
+  align-items: center;
+}
 .hero-text {
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  max-width: 216px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
-  max-width: 496px;
 }
 
 button {
@@ -431,19 +437,45 @@ button:focus {
   border-radius: 4px;
   color: #fff;
 }
+@media only screen and (min-width: 768px) {
+  .hero-image {
+    max-width: 768px;
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+  .hero-text {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 40px;
+    max-width: 496px;
+  }
+  .hero-button {
+    margin-top: 36px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .hero-image {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    max-width: 1440px;
+
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hero-button {
+    margin-top: 48px;
+  }
+}
 /* opportunities */
 .opportunities {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .opportunities-container {
   display: flex;
-  padding: 0;
-  gap: 24px;
-
   align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .visualli-hidden {
@@ -461,56 +493,99 @@ button:focus {
 
 .opportunities-list {
   display: flex;
-  gap: 24px;
-  list-style: none;
-}
-
-.opportunities-item {
-  width: calc((100% - 72px) / 4);
+  flex-direction: column;
+  gap: 72px;
 }
 
 .icon-box {
-  display: block;
-  margin-bottom: 8px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  height: 112px;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-
-  background-color: #f4f4fd;
-}
-
-.icon {
-  align-items: center;
+  display: none;
 }
 
 .opportunities-name {
-  margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
+  text-align: center;
   color: #2e2f42;
-  padding-top: 8px;
+  margin-bottom: 8px;
 }
 
 .opportunities-text {
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  width: 264px;
+  width: 288px;
 }
+@media only screen and (min-width: 768px) {
+  .opportunities-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 72px;
+  }
+  .opportunities-item {
+    max-width: 356px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .opportunities {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .opportunities-container {
+    padding: 0;
+    gap: 24px;
 
+    align-items: center;
+    justify-content: center;
+  }
+  .opportunities-list {
+    gap: 24px;
+    list-style: none;
+  }
+  .opportunities-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .icon-box {
+    display: block;
+    margin-bottom: 8px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 112px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+
+    background-color: #f4f4fd;
+  }
+  .icon {
+    align-items: center;
+  }
+  .opportunities-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    padding-top: 8px;
+  }
+  .opportunities-text {
+    font-weight: 400;
+
+    width: 264px;
+  }
+}
+/* team */
 img {
   display: block;
   width: 100%;
   height: auto;
 }
-/* team */
+
 .team {
   background-color: #f4f4fd;
   padding-top: 120px;
