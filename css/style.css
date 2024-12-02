@@ -86,8 +86,7 @@ input {
 }
 
 .header-nav {
-  display: flex;
-  align-items: center;
+  display: none;
 }
 
 .logo-header {
@@ -98,7 +97,8 @@ input {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
+  padding: 24px 0;
+  margin-right: 120px;
 }
 
 .logo-link-header {
@@ -106,75 +106,9 @@ input {
 }
 
 .nav-list {
-  display: flex;
-  gap: 40px;
-  color: #2e2f42;
+  display: none;
 }
 
-.nav-link {
-  position: relative;
-  display: block;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  padding: 24px 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-link.current {
-  position: relative;
-  color: #404bbf;
-}
-.nav-link::after {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-
-  width: 100%;
-  height: 4px;
-
-  background-color: #404bbf;
-  border-radius: 2px;
-  opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-link:hover::after,
-.nav-link:focus::after,
-.nav-link.current::after {
-  opacity: 1;
-}
-
-.nav-link:hover,
-.nav-link:focus,
-.nav-link:active,
-.address-link:hover,
-.address-link:focus,
-.address-link:active {
-  color: #404bbf;
-}
-
-.address {
-  font-style: normal;
-  margin-left: auto;
-}
-
-.address-list {
-  display: flex;
-  gap: 40px;
-}
-
-.address-link {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .icon-nav-btn {
   padding: 0;
   margin-left: auto;
@@ -186,7 +120,104 @@ input {
   display: block;
   fill: #2f2f37;
 }
-/* menu */
+@media only screen and (min-width: 768px) {
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+  .nav-list {
+    display: flex;
+    gap: 40px;
+    color: #2e2f42;
+  }
+  .nav-link {
+    position: relative;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav-link.current {
+    position: relative;
+    color: #404bbf;
+  }
+  .nav-link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    width: 100%;
+    height: 4px;
+
+    background-color: #404bbf;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-link:hover::after,
+  .nav-link:focus::after,
+  .nav-link.current::after {
+    opacity: 1;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus,
+  .nav-link:active,
+  .address-link:hover,
+  .address-link:focus,
+  .address-link:active {
+    color: #404bbf;
+  }
+
+  .address {
+    font-style: normal;
+    margin-left: auto;
+  }
+
+  .address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .address-link {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .icon-nav-btn {
+    display: none;
+  }
+  .mob-backdrop-menu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .logo-header {
+    margin-right: 76px;
+  }
+  .address-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .address-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+}
+/* backdrop-menu */
 .mob-backdrop-menu {
   position: fixed;
   left: 0;
@@ -208,6 +239,7 @@ input {
   opacity: 1;
   pointer-events: auto;
 }
+
 /* Menu */
 .menu-window {
   position: relative;
@@ -265,15 +297,20 @@ input {
   flex-grow: 0;
   margin: 20px 0px;
 }
+.mob-link .active,
+.address-link-menu .active {
+  color: #404bbf;
+}
 .mob-link {
-  color: rgb(46, 47, 66);
+  color: #2e2f42;
 
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
-  letter-spacing: 0.02;
+  letter-spacing: 0.02em;
   text-align: left;
 }
+
 .address-list-menu {
   position: absolute;
   width: 193px;
@@ -286,6 +323,15 @@ input {
   gap: 24px;
   padding: 0px;
 }
+.address-link-menu {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #434455;
+}
+
 .social-icons-list-menu {
   position: absolute;
   display: flex;
@@ -320,8 +366,9 @@ input {
 }
 
 .icon-social-menu {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
+  fill: #fff;
 }
 /* hero-image */
 .hero-image {
