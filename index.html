@@ -54,7 +54,7 @@
             </li>
           </ul>
         </address>
-        <button class="icon-nav-btn" type="button">
+        <button class="icon-nav-btn" type="button" data-menu-open>
           <svg class="icon-menu" width="24" height="24">
             <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
           </svg>
@@ -65,7 +65,9 @@
       <section class="hero-image">
         <div class="container hero-container">
           <h1 class="hero-text">Effective Solutions for Your Business</h1>
-          <button class="hero-button" type="button">Order Service</button>
+          <button class="hero-button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -388,7 +390,7 @@
           <ul class="portfolio-list">
             <li class="portfolio-item">
               <div class="portfolio-wraper">
-                <picture>
+                <picture class="portfolio-picture">
                   <source
                     media="(min-width: 1158px)"
                     srcset="
@@ -412,11 +414,11 @@
                   />
 
                   <img
+                    class="portfolio-image"
                     src="./images/portfolio/img-5.jpg"
                     alt="Banking App"
                     width="360"
                     height="300"
-                    class="portfolio-image"
                   />
                 </picture>
                 <p class="overflow-text">
@@ -432,7 +434,7 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-wraper">
-                <picture>
+                <picture class="portfolio-picture">
                   <source
                     media="(min-width: 1158px)"
                     srcset="
@@ -456,11 +458,11 @@
                   />
 
                   <img
+                    class="portfolio-image"
                     src="./images/portfolio/img-6.jpg"
                     alt="Cashless Payment"
                     width="360"
                     height="300"
-                    class="portfolio-image"
                   />
                 </picture>
                 <p class="overflow-text">
@@ -476,7 +478,7 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-wraper">
-                <picture>
+                <picture class="portfolio-picture">
                   <source
                     media="(min-width: 1158px)"
                     srcset="
@@ -500,11 +502,11 @@
                   />
 
                   <img
+                    class="portfolio-image"
                     src="./images/portfolio/img-7.jpg"
                     alt="Meditation App"
                     width="360"
                     height="300"
-                    class="portfolio-image"
                   />
                 </picture>
                 <p class="overflow-text">
@@ -520,7 +522,7 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-wraper">
-                <picture>
+                <picture class="portfolio-picture">
                   <source
                     media="(min-width: 1158px)"
                     srcset="
@@ -544,11 +546,11 @@
                   />
 
                   <img
+                    class="portfolio-image"
                     src="./images/portfolio/img-8.jpg"
                     alt="Taxi Service"
                     width="360"
                     height="300"
-                    class="portfolio-image"
                   />
                 </picture>
                 <p class="overflow-text">
@@ -564,7 +566,7 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-wraper">
-                <picture>
+                <picture class="portfolio-picture">
                   <source
                     media="(min-width: 1158px)"
                     srcset="
@@ -588,11 +590,11 @@
                   />
 
                   <img
+                    class="portfolio-image"
                     src="./images/portfolio/img-9.jpg"
                     alt="Screen Illustrations"
                     width="360"
                     height="300"
-                    class="portfolio-image"
                   />
                 </picture>
                 <p class="overflow-text">
@@ -608,7 +610,7 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-wraper">
-                <picture>
+                <picture class="portfolio-picture">
                   <source
                     media="(min-width: 1158px)"
                     srcset="
@@ -632,11 +634,11 @@
                   />
 
                   <img
+                    class="portfolio-image"
                     src="./images/portfolio/img-10.jpg"
                     alt="Online Courses"
                     width="360"
                     height="300"
-                    class="portfolio-image"
                   />
                 </picture>
                 <p class="overflow-text">
@@ -740,9 +742,9 @@
       </div>
     </footer>
 
-    <div class="backdrop is-open">
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button class="click-button" type="button">
+        <button class="click-button" type="button" data-modal-close>
           <svg class="icon-click" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -836,71 +838,82 @@
         </form>
       </div>
     </div>
+    <div class="mobil-menu" data-menu>
+      <div class="container menu-window">
+        <button class="mob-icon-menu-closed" data-menu-close>
+          <svg class="icon-close-menu" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="mob-list">
+          <li class="mob-item">
+            <a class="mob-link active" href="./index.html">Studio</a>
+          </li>
+          <li class="mob-item">
+            <a class="mob-link" href="">Portfolio</a>
+          </li>
+          <li class="mob-item">
+            <a class="mob-link" href="">Contacts</a>
+          </li>
+        </ul>
+        <ul class="address-list-menu">
+          <li class="address-item-menu">
+            <a class="address-link-menu active" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li class="address-item-menu">
+            <a class="address-link-menu" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
 
-    <div class="menu-window">
-      <button class="mob-icon-menu-closed">
-        <svg class="icon-close-menu" width="8" height="8">
-          <use href="./images/icons.svg#icon-close"></use>
-        </svg>
-      </button>
-      <ul class="mob-list">
-        <li class="mob-item">
-          <a class="mob-link active" href="./index.html">Studio</a>
-        </li>
-        <li class="mob-item">
-          <a class="mob-link" href="">Portfolio</a>
-        </li>
-        <li class="mob-item">
-          <a class="mob-link" href="">Contacts</a>
-        </li>
-      </ul>
-      <ul class="address-list-menu">
-        <li class="address-item-menu">
-          <a class="address-link-menu active" href="tel:+110001111111"
-            >+11 (000) 111-11-11</a
-          >
-        </li>
-        <li class="address-item-menu">
-          <a class="address-link-menu" href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
-        </li>
-      </ul>
-
-      <ul class="social-icons-list-menu">
-        <li class="social-icons-item-menu">
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            class="link-menu"
-          >
-            <svg class="icon-social-menu" width="24" height="24">
-              <use href="./images/icons.svg#icon-instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-icons-item-menu">
-          <a href="https://www.twitter.com" target="_blank" class="link-menu">
-            <svg class="icon-social-menu" width="24" height="24">
-              <use href="./images/icons.svg#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-icons-item-menu">
-          <a href="https://www.facebook.com/" target="_blank" class="link-menu">
-            <svg class="icon-social-menu" width="24" height="24">
-              <use href="./images/icons.svg#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-icons-item-menu">
-          <a href="https://ua.linkedin.com/" target="_blank" class="link-menu">
-            <svg class="icon-social-menu" width="24" height="24">
-              <use href="./images/icons.svg#icon-linkedin"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+        <ul class="social-icons-list-menu">
+          <li class="social-icons-item-menu">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="link-menu"
+            >
+              <svg class="icon-social-menu" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons-item-menu">
+            <a href="https://www.twitter.com" target="_blank" class="link-menu">
+              <svg class="icon-social-menu" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons-item-menu">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="link-menu"
+            >
+              <svg class="icon-social-menu" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons-item-menu">
+            <a
+              href="https://ua.linkedin.com/"
+              target="_blank"
+              class="link-menu"
+            >
+              <svg class="icon-social-menu" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <script src="./js/modal.js"></script>
+      <script src="./js/menu.js"></script>
     </div>
   </body>
 </html>
