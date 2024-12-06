@@ -82,6 +82,8 @@ input {
 }
 
 .header-container {
+  max-width: 320px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -121,6 +123,9 @@ input {
   fill: #2f2f37;
 }
 @media only screen and (min-width: 768px) {
+  .header-container {
+    max-width: 768px;
+  }
   .header-nav {
     display: flex;
     align-items: center;
@@ -133,6 +138,7 @@ input {
     display: flex;
     gap: 40px;
     color: #2e2f42;
+    margin-right: 122px;
   }
 
   .nav-link {
@@ -209,8 +215,15 @@ input {
   }
 }
 @media only screen and (min-width: 1158px) {
+  .header-container {
+    max-width: 1158px;
+    display: flex;
+  }
   .logo-header {
     margin-right: 76px;
+  }
+  .nav-list {
+    margin-right: auto;
   }
   .address-list {
     flex-direction: row;
