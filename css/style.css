@@ -83,7 +83,7 @@ input {
 
 .header-container {
   max-width: 320px;
-
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,7 +113,7 @@ input {
 
 .icon-nav-btn {
   padding: 0;
-  margin-left: auto;
+
   background-color: transparent;
   border: none;
 }
@@ -275,7 +275,7 @@ input {
   text-align: center;
   color: #fff;
   max-width: 216px;
-  padding-bottom: 72px;
+
   margin: 0 auto;
 }
 
@@ -291,6 +291,7 @@ button {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 72px;
 }
 
 button:hover,
@@ -423,7 +424,7 @@ button:focus {
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  text-align: left;
+  text-align: center;
   color: #2e2f42;
   margin-bottom: 8px;
 }
@@ -450,6 +451,9 @@ button:focus {
   }
   .opportunities-item {
     max-width: 356px;
+  }
+  .opportunities-name {
+    text-align: left;
   }
   .opportunities-text {
     max-width: 356px;
@@ -655,7 +659,7 @@ img {
 .portfolio-container {
   max-width: 320px;
   padding: 0 16px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .portfolio-logo {
@@ -803,11 +807,13 @@ img {
   max-width: 320px;
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
   gap: 72px;
+  margin: 0 auto;
 }
 
 .footer-logo-box {
+  min-width: 264px;
   text-align: center;
 }
 
@@ -834,7 +840,7 @@ img {
   letter-spacing: 0.02em;
   text-align: start;
   color: #f4f4fd;
-  max-width: 264px;
+  max-width: 100%;
 }
 
 .footer-social {
@@ -967,17 +973,18 @@ img {
     max-width: 768px;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
-    row-gap: 72px;
-    margin: 0 108px;
+    gap: 0;
+    justify-content: flex-start;
+    padding: 0 108px;
+    margin: 0 auto;
   }
   .footer-logo-box {
+    max-width: 264px;
+    margin-right: 24px;
+    margin-bottom: 72px;
     text-align: left;
   }
 
-  .logo-footer {
-    text-align: center;
-  }
   .footer-social {
     text-align: center;
   }
@@ -1029,15 +1036,14 @@ img {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: baseline;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .footer-logo-box {
-    flex-direction: column;
-    margin-left: 0;
+    max-width: 264px;
     margin-right: 120px;
+    margin-bottom: 0;
   }
   .footer-social {
     margin-right: 80px;
