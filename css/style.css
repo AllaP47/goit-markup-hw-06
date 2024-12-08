@@ -340,6 +340,7 @@ button:focus {
 
   .hero-container {
     max-width: 768px;
+    margin: 0 auto;
   }
   .hero-text {
     font-size: 56px;
