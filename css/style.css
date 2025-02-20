@@ -480,8 +480,9 @@ button:focus {
   }
   .opportunities-list {
     display: flex;
-    align-items: center;
+
     justify-content: center;
+    align-items: flex-start;
     gap: 24px;
   }
   .opportunities-item {
